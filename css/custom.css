@@ -344,16 +344,31 @@ footer a:hover {
     width: 20%
 }
 
-.yt-widgets .row {
-    align-items: center;
+.yt-widgets-row {
+    align-items: stretch;
     justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.yt-widgets .row div {
-    width: 70%;
+.yt-widgets-row > div {
+    padding: 1rem;
 }
 
-.yt-widgets .row div iframe {
+.yt-widgets-row > div:first-child {
+    width: 60%;
+}
+
+.yt-widgets-row > div:last-child {
+    width: 40%;
+}
+
+.yt-widgets-row img {
+    width: 100%;
+}
+
+.yt-widgets-row iframe {
     width: 100%;
     height: 100%;
     min-height: 315px;
@@ -421,7 +436,11 @@ footer a:hover {
         width: 15%
     }
 
-    .yt-widgets .row div {
+    .yt-widgets-row > div:first-child {
+        width: 100%;
+    }
+
+    .yt-widgets-row > div:last-child {
         width: 100%;
     }
 }
@@ -547,6 +566,7 @@ footer a:hover {
         width: 12%;
         margin: 1rem
     }
+
 }
 
 @media (width:1024px) {
